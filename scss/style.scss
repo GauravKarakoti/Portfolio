@@ -2,6 +2,11 @@
 @import 'bootstrap/variables';
 
 $font-primary: 'Poppins',Arial, sans-serif;
+$font-secondary: 'Inter', Arial, sans-serif;
+
+$border-radius-base: 12px;
+$border-radius-pill: 50px;
+$border-radius-sm: 6px;
 
 $white: #fff;
 $black: #000000;
@@ -27,14 +32,14 @@ $secondary: #a0f669;
     transition:         all $transition ease;
 }
 
-html {
-	// overflow-x: hidden;
-}
+// html {
+// 	overflow-x: hidden;
+// }
 body {
-	font-family: $font-primary;
+	font-family: $font-secondary;
 	background: $black;
-	font-size: 16px;
-	line-height: 1.8;
+	font-size: 1rem;
+	line-height: 1.6;
 	font-weight: 400;
 	color: lighten($black,60%);
 	&.menu-show {
@@ -55,9 +60,10 @@ a {
 }
 h1, h2, h3, h4, h5,
 .h1, .h2, .h3, .h4, .h5 {
+	font-family: $font-primary;
 	line-height: 1.5;
 	color: rgba(255,255,255,1);
-	font-weight: 400;
+	font-weight: 600;
 }
 
 .text-primary {
@@ -736,8 +742,9 @@ h1, h2, h3, h4, h5,
 
 //BUTTON
 .btn {
+	font-family: $font-primary;
 	cursor: pointer;
-	@include border-radius(40px);
+	@include border-radius($border-radius-pill);
 	// box-shadow: none!important;
 	-webkit-box-shadow: 0px 24px 36px -11px rgba(0,0,0,0.09);
 	-moz-box-shadow: 0px 24px 36px -11px rgba(0,0,0,0.09);
@@ -810,7 +817,9 @@ h1, h2, h3, h4, h5,
 		}
 	}
 }
-
+.resume-wrap {
+  @include border-radius($border-radius-base);
+}
 
 //FTCO ABOUT
 .ftco-about{
@@ -985,12 +994,6 @@ h1, h2, h3, h4, h5,
 	}
 }
 //PROGRESS BAR
-.progress{
-	height: 10px;
-	box-shadow: none;
-	background: lighten($black,10%);
-	overflow: visible;
-}
 .progress-bar{
 	background: $primary;
 	box-shadow: none;
@@ -1021,7 +1024,16 @@ h1, h2, h3, h4, h5,
 		color: $white;
 	}
 }
-
+.progress{
+	height: 10px;
+	box-shadow: none;
+	background: lighten($black,10%);
+	overflow: visible;
+	@include border-radius($border-radius-pill);
+	.progress-bar {
+		@include border-radius($border-radius-pill);
+	}
+}
 
 // HIRE ME
 .ftco-hireme{
@@ -1502,6 +1514,10 @@ textarea.form-control {
 	}
 }
 
+.project .block-20, .img-about img {
+  @include border-radius($border-radius-base);
+}
+
 //blocks 
 .block-20 {
 	overflow: hidden;
@@ -1534,6 +1550,20 @@ textarea.form-control {
 					color: $primary;
 				}
 			}
+		}
+		h1 {
+			font-size: 3.5rem;
+			line-height: 1.2;
+			font-weight: 800;
+			
+			@include media-breakpoint-down(md) {
+			font-size: 2.5rem;
+			}
+		}
+
+		h2 {
+			font-size: 2rem;
+			font-weight: 600;
 		}
 	}
 	.meta {
@@ -1572,6 +1602,22 @@ textarea.form-control {
 			.icon, .text {
 				display: table-cell;
 				vertical-align: top;
+			}
+			.text {
+				h1 {
+					font-size: 3.5rem;
+					line-height: 1.2;
+					font-weight: 800;
+					
+					@include media-breakpoint-down(md) {
+					font-size: 2.5rem;
+					}
+				}
+
+				h2 {
+					font-size: 2rem;
+					font-weight: 600;
+				}
 			}
 			.icon {
 				width: 40px;
@@ -1644,7 +1690,7 @@ textarea.form-control {
 	.box{
 		width: 100%;
 		display: block;
-		@include border-radius(4px);
+		@include border-radius($border-radius-base);
 		@include media-breakpoint-down(md){
 			margin-bottom: 30px;
 		}
@@ -1741,6 +1787,20 @@ textarea.form-control {
 					font-weight: 600;
 				}
 			}
+		}
+		h1 {
+			font-size: 3.5rem;
+			line-height: 1.2;
+			font-weight: 800;
+			
+			@include media-breakpoint-down(md) {
+			font-size: 2.5rem;
+			}
+		}
+
+		h2 {
+			font-size: 2rem;
+			font-weight: 600;
 		}
 	}
 }

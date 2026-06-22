@@ -8831,13 +8831,13 @@ h1, h2, h3, h4, h5,
   -ms-border-radius: 5px;
   border-radius: 5px; }
   .resume-wrap .date {
-    font-weight: 900;
-    font-size: 26px;
+    font-weight: 700;
+    font-size: 1.5rem;
     color: #ffbd39; }
   .resume-wrap h2 {
     font-size: 26px; }
   .resume-wrap .position {
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 600;
     letter-spacing: 3px;
     text-transform: uppercase; }
